@@ -35,22 +35,26 @@ class EntitySemanticsPrivate;
 /// \brief System for assigning semantics to entities, such as models,
 /// by classifying them into categories and assigning them tags.
 /// Reference:
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/EntityInfo.msg,
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/EntityCategory.msg,
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/TagsFilter.msg
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
+/// EntityInfo.msg,
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
+/// EntityCategory.msg,
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
+/// TagsFilter.msg
 ///
 /// ## System Parameters
 ///
-/// This system is meant to be attached to a `<world>`, but it parses parameters
-/// found in entities such as models.
+/// This system is meant to be attached to a `<world>`, but it parses
+/// parameters found in entities such as models.
 ///
 /// ## Entity Parameters
 ///
-/// - `<gz:semantics>`: Root element to be specified inside entities, e.g.
-/// <model>. It has the following child parameters:
+/// - `<gz:semantics>`: Root element to be specified inside entities,
+///   e.g. `<model>`. It has the following child parameters:
 ///
 ///   - `<category>`: string representation of the value as defined in
-///   https://github.com/ros-simulation/simulation_interfaces/blob/1.0.0/msg/EntityCategory.msg.
+///   https://github.com/ros-simulation/simulation_interfaces/blob/
+///   1.0.0/msg/EntityCategory.msg.
 ///   The string is formed by removing the prefix `CATEGORY_` from the
 ///   categories listed in the EntityCategory message. Example: for
 ///   `CATEGORY_ROBOT`, it would be `<category>ROBOT</category>`. Lowercase
@@ -67,18 +71,14 @@ class EntitySemanticsPrivate;
 ///
 /// Example:
 ///
-/// ```xml
-/// <model name="robot1">
-///   <gz:semantics>
-///     <category>ROBOT</category>
-///     <tag>mobile</tag>
-///     <tag>diff_drive</tag>
-///     <description>Food delivery mobile robot</description>
-///   </gz:semantics>
-/// </model>
-///
-///
-/// ```
+/// `<model name="robot1">`
+///   `<gz:semantics>`
+///     `<category>ROBOT</category>`
+///     `<tag>mobile</tag>`
+///     `<tag>diff_drive</tag>`
+///     `<description>Food delivery mobile robot</description>`
+///   `</gz:semantics>`
+/// `</model>`
 ///
 
 class EntitySemantics : public System,

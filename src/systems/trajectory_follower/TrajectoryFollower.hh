@@ -41,9 +41,9 @@ namespace systems
   /// in sequence. The movement is generated applying force and torque to one of
   /// of the model links. It's also possible to loop through the waypoints for
   /// generating a never ending trajectory.
-  /// Waypoints may be inserted manually via the <waypoints> element, or
-  /// generated relative to the model's initial position via the <line> or
-  /// <circle> elements.  Only one of these options should be used.
+  /// Waypoints may be inserted manually via the `<waypoints>` element, or
+  /// generated relative to the model's initial position via the `<line>` or
+  /// `<circle>` elements. Only one of these options should be used.
   ///
   /// ## System Parameters
   ///
@@ -100,37 +100,37 @@ namespace systems
   ///   - `<radius>`: Radius (meters) of circular path to travel.
   ///
   /// Here are three examples:
-  /// ```
-  /// <plugin
-  ///   filename="gz-sim-trajectory-follower-system"
-  ///   name="gz::sim::systems::TrajectoryFollower">
-  ///   <link_name>base_link</link_name>
-  ///   <loop>true</loop>
-  ///   <waypoints>
-  ///     <waypoint>25 0</waypoint>
-  ///     <waypoint>15 0</waypoint>
-  ///   </waypoints>
-  /// </plugin>
-  /// <plugin
-  ///   filename="gz-sim-trajectory-follower-system"
-  ///   name="gz::sim::systems::TrajectoryFollower">
-  ///   <link_name>base_link</link_name>
-  ///   <loop>true</loop>
-  ///   <line>
-  ///     <direction>0</direction>
-  ///     <length>5</length>
-  ///   </line>
-  /// </plugin>
-  /// <plugin
-  ///   filename="gz-sim-trajectory-follower-system"
-  ///   name="gz::sim::systems::TrajectoryFollower">
-  ///   <link_name>base_link</link_name>
-  ///   <loop>true</loop>
-  ///   <circle>
-  ///     <radius>2</radius>
-  ///   </circle>
-  /// </plugin>
-  /// ```
+  /// `<plugin`
+  ///   `filename="gz-sim-trajectory-follower-system"`
+  ///   `name="gz::sim::systems::TrajectoryFollower">`
+  ///   `<link_name>base_link</link_name>`
+  ///   `<loop>true</loop>`
+  ///   `<waypoints>`
+  ///     `<waypoint>25 0</waypoint>`
+  ///     `<waypoint>15 0</waypoint>`
+  ///   `</waypoints>`
+  /// `</plugin>`
+  ///
+  /// `<plugin`
+  ///   `filename="gz-sim-trajectory-follower-system"`
+  ///   `name="gz::sim::systems::TrajectoryFollower">`
+  ///   `<link_name>base_link</link_name>`
+  ///   `<loop>true</loop>`
+  ///   `<line>`
+  ///     `<direction>0</direction>`
+  ///     `<length>5</length>`
+  ///   `</line>`
+  /// `</plugin>`
+  ///
+  /// `<plugin`
+  ///   `filename="gz-sim-trajectory-follower-system"`
+  ///   `name="gz::sim::systems::TrajectoryFollower">`
+  ///   `<link_name>base_link</link_name>`
+  ///   `<loop>true</loop>`
+  ///   `<circle>`
+  ///     `<radius>2</radius>`
+  ///   `</circle>`
+  /// `</plugin>`
   class TrajectoryFollower
       : public System,
         public ISystemConfigure,
