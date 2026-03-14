@@ -35,12 +35,9 @@ class EntitySemanticsPrivate;
 /// \brief System for assigning semantics to entities, such as models,
 /// by classifying them into categories and assigning them tags.
 /// Reference:
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
-/// EntityInfo.msg,
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
-/// EntityCategory.msg,
-/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/
-/// TagsFilter.msg
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/EntityInfo.msg,
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/EntityCategory.msg,
+/// https://github.com/ros-simulation/simulation_interfaces/blob/main/msg/TagsFilter.msg
 ///
 /// ## System Parameters
 ///
@@ -53,8 +50,7 @@ class EntitySemanticsPrivate;
 ///   e.g. `<model>`. It has the following child parameters:
 ///
 ///   - `<category>`: string representation of the value as defined in
-///   https://github.com/ros-simulation/simulation_interfaces/blob/
-///   1.0.0/msg/EntityCategory.msg.
+///   https://github.com/ros-simulation/simulation_interfaces/blob/1.0.0/msg/EntityCategory.msg.
 ///   The string is formed by removing the prefix `CATEGORY_` from the
 ///   categories listed in the EntityCategory message. Example: for
 ///   `CATEGORY_ROBOT`, it would be `<category>ROBOT</category>`. Lowercase
