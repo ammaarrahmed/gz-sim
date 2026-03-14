@@ -75,9 +75,7 @@ namespace systems
   ///   * Added Mass: `<{x|y|z|k|m|n}Dot{U|V|W|P|Q|R}>`, e.g. `<xDotR>`
   ///       (Deprecated) Units are either kg or kgm^2 depending on the
   ///       choice of terms. You should use the sdf method based spec
-  //        for `fluid_added_mass`:
-  ///       http://sdformat.org/spec?ver=1.11&elem=link#
-  ///       inertial_fluid_added_mass
+  ///       for `fluid_added_mass`: http://sdformat.org/spec?ver=1.11&elem=link#inertial_fluid_added_mass
   ///   * Quadratic Damping With abs term (this is probably what you want):
   ///       `<{x|y|z|k|m|n}{U|V|W|P|Q|R}abs{U|V|W|P|Q|R}>`
   ///       e.g. `<xRabsQ>`
